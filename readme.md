@@ -1,10 +1,10 @@
-## Boat Ramp Explorer!
+## Ultimate Boat Ramp Explorer!
 
 Hi, and welcome to the ultimate boat ramp explorer, for those who like boat ramps!
 
-This is a Full Stack technical challenge has been designed to reflect some of the work we do and the way we work. It's designed to be fun, challenging and hopefully you may learning something too! There is no right or wrong way to do this challenge, we are more interested in the choices you make along the way.
+This is our Full Stack technical challenge has been designed to reflect some of the work we do and the way we work. It's designed to be fun, challenging and hopefully you may learning something too! There is no right or wrong way to do this challenge, we are more interested in the choices you make along the way.
 
-This small app works, bit it has some _code smells_, _bugs_ and _bad practices_, and no-one likes that!
+This small app works, but it has some _code smells_, _bugs_ and _bad practices_, and no-one likes that!
 
 ## What is the challenge?
 
@@ -29,4 +29,4 @@ To get this app up and running please execute the following, you'll need Node 16
 
 ## Continual improvement
 
-We like to iterate, and learn with every candidate, so we're always interested to get your feedback on this challenge so we can continually improve it. We may reach out afterwards asking for feedback.
+We like to iterate, and learn with every candidate, so we can continually improve it and so we may reach out afterwards asking for your feedback.
