@@ -27,8 +27,8 @@ export const Map = ({
 
   const features: JSX.Element[] = [];
 
-  for (var i = 0; i < ramps.features.length; i++) {
-    var f = ramps.features[i];
+  for (let i = 0; i < ramps.features.length; i++) {
+    let f = ramps.features[i];
 
     features.push(
       <Marker
@@ -71,17 +71,20 @@ export const Map = ({
       style={{ width: "100%", height: "100%" }}
       // Style and key borrowed from https://www.maptiler.com/maps/#basic//vector/1/0/0
       mapStyle="https://api.maptiler.com/maps/streets/style.json?key=eIgS48TpQ70m77qKYrsx"
-      onMove={filterVisibleRamps}
+      onMoveEnd={filterVisibleRamps}
     >
       {features}
       {popupData && (
         <Popup
           latitude={popupData.geometry.coordinates[0][0][0][1]}
           longitude={popupData.geometry.coordinates[0][0][0][0]}
+          closeOnClick={false}
+          onClose={() => setPopupData(undefined)}
         >
-          {JSON.stringify(popupData)}
+          {popupData.id}
         </Popup>
-      )}
-    </ReactMap>
+      )
+      }
+    </ReactMap >
   );
 };
