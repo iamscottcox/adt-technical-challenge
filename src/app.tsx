@@ -7,6 +7,7 @@ import { BoatMaterialsPie } from "./materials-pie-chart";
 import { Header } from "./header";
 import { Map } from "./map";
 import { RampTable } from "./table";
+import { worker } from ".";
 
 export const App = () => {
   const [data, setData] = useState<RampData | undefined>(undefined);
@@ -14,12 +15,20 @@ export const App = () => {
     Feature<MultiPolygon, RampProperties>[] | []
   >([]);
 
-  const getData = async () => {
-    const results = await fetch("./data.json");
-    setData(await results.json());
-  };
+  worker.postMessage({});
+  worker.onmessage = function (e) {
+    console.log('e.data', e.data)
+  }
 
-  getData();
+  useEffect(() => {
+    const getData = async () => {
+      const results = await fetch("./data.json");
+      setData(await results.json());
+    };
+
+    getData();
+  }, [])
+
 
   useEffect(() => {
     if (data?.features && !visibleFeatures.length) {

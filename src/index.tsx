@@ -5,6 +5,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import React from "react";
 import ReactDOM from "react-dom";
 
+export const worker = new Worker('./worker.js');
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
